@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/dashboard.css">
+    <title>Dashboard - Budget IQ</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Budget IQ</h2>
+        </div>
+        <ul>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="finances.html">Sales</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="customers.html">Customers</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Business Overview</h1>
+        <!-- Container for the overview cards -->
+<div class="overview-section">
+    <div class="overview-card-1">
+        <h3>Total Revenue</h3>
+        <p id="total-revenue">$128,430</p>
+        <small id="revenue-change">+20.1% from last month</small>
+    </div>
+    <div class="overview-card-2">
+        <h3>Monthly Income</h3>
+        <p id="monthly-income">$12,543</p>
+        <small id="income-change">+4.75% from last month</small>
+    </div>
+    <div class="overview-card-3">
+        <h3>Monthly Expenses</h3>
+        <p id="monthly-expenses">$8,350</p>
+        <small id="expenses-change">-2.5% from last month</small>
+    </div>
+    <div class="overview-card-4">
+        <h3>Available Inventory</h3>
+        <p id="available-inventory">1,245 units</p>
+        <small>Across 32 product lines</small>
+    </div>
+    <div class="overview-card-5">
+        <h3>Inventory Sold</h3>
+        <p id="inventory-sold">523 units</p>
+        <small>This month</small>
+    </div>
+    <div class="overview-card-6">
+        <h3>Percentage Margins</h3>
+        <p id="percentage-margins">32.8%</p>
+        <small id="margin-change">+1.2% from last month</small>
+    </div>
+</div>
+
+<!-- Container for the Top Sellers section -->
+<div class="top-sellers-section">
+    <div class="card">
+        <h2>Top Sellers</h2>
+        <div class="top-seller-item">
+            <span>1st - Product A</span>
+            <span>150 sales</span>
+        </div>
+        <hr>
+        <div class="top-seller-item">
+            <span>2nd - Product B</span>
+            <span>120 sales</span>
+        </div>
+        <hr>
+        <div class="top-seller-item">
+            <span>3rd - Product C</span>
+            <span>100 sales</span>
+        </div>
+    </div>
+</div>
+
+<!-- Logout Confirmation Popup -->
+<div class="popup-overlay" id="logout-popup">
+    <div class="popup-card">
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out?</p>
+        <button id="confirm-logout-btn" class="confirm-btn">Yes, Logout</button>
+        <button id="cancel-logout-btn" class="cancel-btn">Cancel</button>
+    </div>
+</div>
+    
+    <script src="Java/dashboard.js"></script>
+</body>
+</html>

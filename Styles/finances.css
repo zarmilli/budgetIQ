@@ -1,0 +1,282 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0D1117;
+    color: #ffffff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #161B22;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #C9D1D9;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+    color: #C9D1D9;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    transition: 0,5s;
+}
+
+.sidebar ul li a.active {
+    background-color: #58A6FF;
+    color: #0D1117;
+}
+
+.sidebar ul li a:hover {
+    transform: translateX(10px);
+    color: white;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+.finances-section {
+    background-color: #161B22;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.finances-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+.transactions-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #3E4C59;
+}
+
+.transactions-table th {
+    background-color: #1B2836;
+    color: #ffffff;
+}
+
+.transactions-table td {
+    background-color: #2A3A48;
+}
+
+.transactions-table tr:hover {
+    background-color: #3A4B5B;
+}
+
+/* Add Transaction Button */
+.add-transaction-btn {
+    background-color: #3273DC;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.add-transaction-btn:hover {
+    background-color: #2462B7;
+}
+
+/* Popup Overlay Styles */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-card {
+    background-color: #2A3A48;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: left;
+}
+
+.popup-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #4B5C6B;
+    background-color: #1B2836;
+    color: #ffffff;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #3273DC;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form button[type="button"] {
+    background-color: #555555;
+}
+
+form button[type="button"]:hover {
+    background-color: #444444;
+}
+
+form button:hover {
+    background-color: #2462B7;
+}
+
+/* Show Popup */
+.show-popup #popupOverlay {
+    display: flex;
+}
+
+/* Sidebar Footer and Logout Button */
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn {
+    background-color: #DC3545; /* Red */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    transition: background-color 0.3s ease;
+    translate: -20px;
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+    background: #C82333;
+    border: 1px solid #C82333;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #C82333, 0 0 20px #C82333, 0 0 50px #C82333,
+      0 0 100px #C82333;
+}
+
+/* Popup Overlay (Already in previous code, included for clarity) */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Show Popup (already defined in previous styles, included here for clarity) */
+.show-popup {
+    display: flex;
+}
+
+/* Popup Card Styles (defined previously, reused here) */
+.popup-card {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+}
+
+.popup-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.popup-card button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #28A745; /* Green */
+    color: #ffffff;
+}
+
+.cancel-btn {
+    background-color: #e63446; /* Red */
+    color: #ffffff;
+    margin-top: 10px;
+}

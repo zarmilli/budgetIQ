@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finances - Budget IQ</title>
+    <link rel="stylesheet" href="Styles/finances.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1>Budget IQ</h1>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="finances.html" class="active">Sales</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="customers.html">Customers</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="finances-section">
+            <h2>Finances</h2>
+            <button class="add-transaction-btn" onclick="showAddTransactionPopup()">+ Add Transaction</button>
+
+            <div class="transactions-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Customer Name</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Units</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactions-tbody">
+                        <!-- Transactions will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Transaction Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card">
+            <h3>Add Transaction</h3>
+            <form id="addTransactionForm">
+                <label for="productName">Product Name:</label>
+                <select id="productName" name="productName"></select>
+                <label for="customerName">Customer Name:</label>
+                <select id="customerName" name="customerName"></select>
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="units">Units:</label>
+                <input type="number" id="units" name="units" required>
+                <label for="value">Value:</label>
+                <input type="number" step="0.01" id="value" name="value" required>
+                <button type="submit">Add Transaction</button>
+                <button type="button" onclick="hideAddTransactionPopup()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Popup -->
+<div class="popup-overlay" id="logout-popup">
+    <div class="popup-card">
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out?</p>
+        <button id="confirm-logout-btn" class="confirm-btn">Yes, Logout</button>
+        <button id="cancel-logout-btn" class="cancel-btn">Cancel</button>
+    </div>
+</div>
+
+    <script src="Java/finances.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

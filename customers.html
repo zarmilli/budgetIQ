@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/customers.css">
+    <title>Customers - Budget IQ</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>Budget IQ</h1>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="finances.html">Sales</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a class="active" href="customers.html">Customers</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="customers-section">
+            <h2>Customers</h2>
+            <button class="add-customer-btn" onclick="showAddCustomerPopup()">+ Add Customer</button>
+            <div class="customers-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Items Ordered</th>
+                            <th>Total Spent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customersTableBody">
+                        <!-- Customer data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Customer Popup -->
+    <div id="addCustomerPopup" class="popup-overlay">
+        <div class="popup-card">
+            <h3>Add Customer</h3>
+            <form id="addCustomerForm">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" required>
+                <label for="itemsOrdered">Items Ordered:</label>
+                <input type="number" id="itemsOrdered" min="1" required>
+                <label for="totalSpent">Total Spent:</label>
+                <input type="number" step="0.01" id="totalSpent" required>
+                <button type="submit">Add Customer</button>
+                <button type="button" onclick="closePopup('addCustomerPopup')">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- Logout Confirmation Popup -->
+<div class="popup-overlay" id="logout-popup">
+    <div class="popup-card">
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to log out?</p>
+        <button id="confirm-logout-btn" class="confirm-btn">Yes, Logout</button>
+        <button id="cancel-logout-btn" class="cancel-btn">Cancel</button>
+    </div>
+</div>
+
+    <script src="Java/customers.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1B2836;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #161B22;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #C9D1D9;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+    color: #C9D1D9;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    transition: 0,5s;
+}
+
+.sidebar ul li a.active {
+    background-color: #58A6FF;
+    color: #0D1117;
+}
+
+.sidebar ul li a:hover {
+    transform: translateX(10px);
+    color: white;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-btn {
+    background-color: #DC3545; /* Red */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    transition: background-color 0.3s;
+    translate: -20px;
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+    background: #C82333;
+    border: 1px solid #C82333;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #C82333, 0 0 20px #C82333, 0 0 50px #C82333,
+      0 0 100px #C82333;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+    background-color: #1B2836;
+    min-height: 100vh;
+    box-sizing: border-box;
+    width: calc(100% - 270px);
+}
+
+.customers-section {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.customers-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-customer-btn {
+    background-color: #28A745;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.add-customer-btn:hover {
+    background-color: #218838;
+}
+
+.customers-table {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.customers-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customers-table th, .customers-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #3E4C59;
+}
+
+.customers-table th {
+    background-color: #1B2836;
+    color: #B0BEC5;
+}
+
+.customers-table td {
+    background-color: #273642;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.show-popup {
+    display: flex;
+}
+
+.popup-card {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.popup-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.popup-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-card label {
+    margin-top: 10px;
+}
+
+.popup-card input {
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1B2836;
+    color: #ffffff;
+}
+
+.popup-card button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28A745;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.popup-card button[type="button"] {
+    background-color: #DC3545;
+    margin-top: 10px;
+}
+
+.popup-card button:hover {
+    opacity: 0.9;
+}
+
+/* Popup Overlay (Already in previous code, included for clarity) */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Show Popup (already defined in previous styles, included here for clarity) */
+.show-popup {
+    display: flex;
+}
+
+/* Popup Card Styles (defined previously, reused here) */
+.popup-card {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+}
+
+.popup-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.popup-card button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #28A745; /* Green */
+    color: #ffffff;
+}
+
+.cancel-btn {
+    background-color: #e63446; /* Red */
+    color: #ffffff;
+    margin-top: 10px;
+}

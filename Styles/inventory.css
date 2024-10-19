@@ -1,0 +1,310 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1B2836;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2A3A48;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-header h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu li a {
+    color: #B0BEC5;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar-menu li a.active,
+.sidebar-menu li a:hover {
+    background-color: #3E4C59;
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+    background-color: #1B2836;
+    min-height: 100vh;
+    box-sizing: border-box;
+    width: calc(100% - 270px);
+}
+
+/* Inventory Section Styles */
+.inventory-section {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.inventory-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.add-product-btn, .delete-product-btn, .restock-btn {
+    background-color: #28A745; /* Green */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-product-btn {
+    background-color: #DC3545; /* Red */
+}
+
+.add-product-btn:hover, .delete-product-btn:hover, .restock-btn:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+.delete-product-btn:hover {
+    background-color: #C82333; /* Darker Red */
+}
+
+/* Table Styles */
+.inventory-table {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.inventory-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-table th, .inventory-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #3E4C59;
+}
+
+.inventory-table th {
+    background-color: #1B2836;
+    color: #B0BEC5;
+}
+
+.inventory-table td {
+    background-color: #273642;
+}
+
+.restock-btn {
+    background-color: #3A95FF; /* Blue */
+    border: none;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.restock-btn:hover {
+    background-color: #357AE8; /* Darker Blue */
+}
+
+/* Popup Overlay Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Show Popup */
+.show-popup {
+    display: flex;
+}
+
+/* Popup Card Styles */
+.popup-card {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.popup-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.popup-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-card label {
+    margin-top: 10px;
+}
+
+.popup-card input,
+.popup-card select {
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1B2836;
+    color: #ffffff;
+}
+
+.popup-card button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28A745;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.popup-card button[type="button"] {
+    background-color: #DC3545;
+    margin-top: 10px;
+}
+
+.popup-card button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Sidebar Footer and Logout Button */
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-btn {
+    background-color: #DC3545; /* Red */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    transition: background-color 0.3s;
+    translate: -20px;
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+    background: #C82333;
+    border: 1px solid #C82333;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #C82333, 0 0 20px #C82333, 0 0 50px #C82333,
+      0 0 100px #C82333;
+}
+
+/* Popup Overlay (Already in previous code, included for clarity) */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Show Popup (already defined in previous styles, included here for clarity) */
+.show-popup {
+    display: flex;
+}
+
+/* Popup Card Styles (defined previously, reused here) */
+.popup-card {
+    background-color: #273642;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+}
+
+.popup-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.popup-card button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #28A745; /* Green */
+    color: #ffffff;
+}
+
+.cancel-btn {
+    background-color: #e63446; /* Red */
+    color: #ffffff;
+    margin-top: 10px;
+}
